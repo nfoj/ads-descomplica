@@ -1,0 +1,1 @@
+/home/user/git/foj-dev-br/documentation/rust/syntax-semantics/target/debug/syntax-semantics: /home/user/git/foj-dev-br/documentation/rust/syntax-semantics/src/hr.rs /home/user/git/foj-dev-br/documentation/rust/syntax-semantics/src/main.rs
