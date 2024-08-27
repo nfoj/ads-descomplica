@@ -141,3 +141,36 @@
 - AWS: Shared Responsibility Model
   - Client;
   - AWS.
+
+
+# Infrastructure
+
+- Region (Availability Zones)
+
+Geographical Area
+  - Data replication between regions is controlled by the consumer
+  - Communication between regions uses AWS backbone network infrastructure
+  
+  The region provides full redundancy and connectivity to the network
+  The region typically consists of two or more Availability Zones
+  
+Resume:
+ - Region: São Paulo, Virginia, ...
+ - Communication exists, but you configure it;
+ - Each region is interdependent, they function differently.
+ - Each region has a set of data centers.
+
+How to choose a region
+ - Data governance: Can data leave the country?
+ - Proximity to customers (latency)
+ - Services available in the region
+ - Costs (vary by region)
+
+An Availability Zone is a discrete location within a region that comprises one or more data centers, designed to provide fault tolerance
+↪ and redundancy.
+
+- Elasticity and scalability
+- Fault tolerance
+- High Availability
+  
+A single product instance can be replicated across multiple Availability Zones.
