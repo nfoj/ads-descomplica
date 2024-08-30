@@ -1,3 +1,4 @@
+// cargo watch -x run
 //mod a;
 //mod b;
 //mod c;

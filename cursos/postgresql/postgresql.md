@@ -177,8 +177,66 @@
 
 ```
 
+  // equal: =
+  SELECT *
+  FROM student
+  WHERE name = 'Alice'
+
+  // not equal to: != or <>
+  SELECT * 
+  FROM student
+  WHERE name != 'Alice'
+  
+  // similar: LIKE + _ or % 
+  SELECT *
+  FROM student
+  WHERE name LIKE '_lice'
+
+  // not similar: NOT LIKE + _ or %
+  SEELECT *
+  FROM student
+  WHERE name NOT LIKE 'Alic_'
+
+```
+
+- Example: 
+
+```
+
+  INSERT INTO student (name) VALUES ('Alice');
+  INSERT INTO student (name) VALUES ('Aline');
+  INSERT INTO student (name) VALUES ('Ana');
+  INSERT INTO student (name) VALUES ('Alana');
+  INSERT INTO student (name) VALUES ('Alcides');
+  INSERT INTO student (name) VALUES ('Alceudes');
+
+
+  SELECT * 
+  FROM student
+  WHERE name = 'Alice'
+
+  // Output
+  Alice
+
+
+  SELECT *
+  FROM student
+  WHERE name = 'Joao'
+
+  // Output
+  empty
+
+
+  
+ 
   
 ```
+
+
+
+
+
+
 
 - Create DBase
 

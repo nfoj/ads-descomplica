@@ -2,7 +2,7 @@ use std::io;
 
 pub fn hackerrank() {
     // Array
-    let alice: [i16; 3] = [1, 2, 3];
+    let alice: [i16; 3] = [4, 5, 6];
     let bob: [i16; 3] = [4, 5, 6];
 
     // print - Alice
@@ -40,6 +40,33 @@ pub fn hackerrank() {
         println!("{}", true);
     }
     println!("-----------------------------------------");
+
+    // Alice
+    println!("Values of Alice: ");
+    for i in 0..alice.len() {
+        println!("{}", alice[i]);
+    }
+
+    // Bob
+    println!("Values of Bob: ");
+    for i in 0..bob.len() {
+        println!("{}", bob[i]);
+    }
+
+    //
+    let mut palice = 0;
+    let mut pbob = 0;
+
+    for i in 0..alice.len() {
+        if alice[i] > bob[i] {
+            palice += 1;
+        } else if alice[i] < bob[i] {
+            pbob += 1;
+        }
+    }
+
+    println!("Alice: {}", palice);
+    println!("Bob: {}", pbob);
 
     println!("-----------------------------------------");
     println!("-----------------------------------------");
