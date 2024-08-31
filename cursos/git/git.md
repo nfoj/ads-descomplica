@@ -42,6 +42,13 @@
   
 ```
 
+- Help
+
+```
+  git help
+  
+```
+
 - History
 
 ```
@@ -59,14 +66,20 @@
 - Delete commits
 
 ```
-  
-  
-```
-
-- 
-
-```
+  git reset --hard "ID - Commit you want to keep, previous to the one you want to reset"
   
 ```
 
-    
+- Changes the previous commit message
+
+```
+  git commit --amend -m "message"
+
+```
+
+- Git ignore
+
+```
+  https://www.toptal.com/developers/gitignore/
+  
+```    
