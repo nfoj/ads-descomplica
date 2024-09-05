@@ -157,6 +157,7 @@
   
 ```
 
+
 - SELECT and AS
 
   SELECT: column or * (all columns)
@@ -172,6 +173,7 @@
   FROM student;  
   
 ```
+
 
 - Filters
 
@@ -193,11 +195,22 @@
   WHERE name LIKE '_lice'
 
   // not similar: NOT LIKE + _ or %
-  SEELECT *
+  SELECT *
   FROM student
   WHERE name NOT LIKE 'Alic_'
 
+  // IS NULL = empty
+  SELECT * 
+  FROM student
+  WHERE cpf IS NULL 
+
+  // IS NOT NULL = no empty
+  SELECT *
+  FROM student
+  WHERE cpf IS NOT NULL
+
 ```
+
 
 - Example: 
 
@@ -227,35 +240,129 @@
   empty
 
 
+  SELECT *  
+  FROM student
+  WHERE name != 'Alice'
+
+  // Output
+  Aline
+  Ana
+  Alana
+  Alcides
+  Alceudes
+
+
+  SELECT * 
+  FROM student
+  WHERE name LIKE '_lice'
+
+  // Output
+  Alice
+  Aline
+
+
+  SELECT *
+  FROM student
+  WHERE name NOT LIKE 'Ana'
+
+  // Output
+  Alice
+  Aline
+  Alana
+  Alcides
+  Alceudes
+
+
+  SELECT *
+  FROM student
+  WHERE name LIKE 'Al%'
+
+  // Output
+  Alice
+  Aline
+  Alana
+  Alcides
+  Alceudes
+
+
+  SELECT * 
+  FROM student
+  WHERE name LIKE '%c%'
+
+  // Output
+  Alcides
+  Alceudes
   
- 
+```
+
+
+- Num: =, !=, <, >, <=, >=, BETWEEN 
+
+```
+
+  SELECT *
+  FROM student
+  WHERE year = 10
+
+  SELECT *
+  FROM student
+  WHERE year != 10
+
+  SELECT *
+  FROM student
+  WHERE year < 10
+
+  SELECT *
+  FROM student
+  WHERE year > 10
+
+  SELECT *
+  FROM student
+  WHERE year <= 10
+
+
+  SELECT *
+  FROM student
+  WHERE year >= 10
+
+
+  SELECT *
+  FROM student
+  WHERE year BETWEEN 10 AND 20
+
+```
+
+
+- Bool: true or false 
+
+```
+
+  SELECT *
+  FROM student
+  WHERE active = false
+
+  SELECT * 
+  FROM student
+  WHERE active = true
   
 ```
 
 
-
-
-
-
-
-- Create DBase
+- Example:
 
 ```
 
-  
-```
+  SELECT * 
+  FROM student
+  WHERE name LIKE 'A%'
+  AND cpf IS NOT NULL
 
-- Create DBase
 
-```
-
-  
-```
-
-- Create DBase
-
-```
-
+  SELECT * 
+  FROM student
+  WHERE name LIKE 'Alice'
+  OR name LIKE 'Sebastian'
+  OR name LIKE 'Ana'
   
 ```
 
