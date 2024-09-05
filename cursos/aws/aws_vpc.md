@@ -76,3 +76,28 @@ Route Table - Private
 | 10.0.0.0/16 | Local       |
 | 0.0.0.0/0   | nat-gwid    |
 
+
+Example: 
+
+Internet      Masquerade          Desktop (Linux)
+
+Wan           Serve Security      Lan
+
+| <- Package       | <- Package              | <- Package        |
+|------------------|-------------------------|-------------------|
+| S: 200.100.50.99 | S: 200.100.50.99        | S: 192.168.200.10 |
+| D: google.com    | -- S: 192.168.200.10 -- | D: google.com     |
+| Dport: 80        | D: google.com           | Dport: 80         |
+|                  | Dport: 80               |                   |
+
+
+| Package ->       | Package ->             |  Package ->       |
+|------------------|------------------------|-------------------|
+| S: 200.100.50.99 | -- S: 200.100.50.99 -- | S: 192.168.200.10 |
+| D: google.com    | S: 192.168.200.10      | D: google.com     |
+| Dport: 80        | D: google.com          | Dport: 80         |
+|                  | Dport: 80              |                   |
+
+
+> [!NOTE]  
+> Study: AWS Direct Connect VS VPN, CDN - AWM CloudFront
