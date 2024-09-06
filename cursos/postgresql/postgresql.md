@@ -348,7 +348,7 @@
 ```
 
 
-- Example:
+- AND - OR
 
 ```
 
@@ -366,25 +366,101 @@
   
 ```
 
-- Create DBase
+- Primary Key
 
 ```
+  CREATE TABLE test;
+    id INTEGER PRIMARY KEY;
+    name VARCHAR(255) NOT NULL;
+
+
+  INSERT INTO test (id, name) VALUES (1, 'HTML');
+  INSERT INTO test (id, name) VALUES (2, 'CSS');
+
+
+  SELECT *
+  FROM test;
+
+  // NOT NULL == NULL
+  // INSERT INTO test (id, name) VALUES (1, NULL); ERRO
+  // INSERT INTO test (id, name) VALUES (NULL, NULL); ERRO
 
   
 ```
 
-- Create DBase
+- FOREIGN KEY 
 
 ```
 
+  // 3 Tables: names, course, student; 
+
+  CREATE TABLE names (
+    id INTERGER,
+    name VARCHAR(255) NOT NULL
+  );
+
+  INSERT INTO names (id, name) VALUES (1, 'Maria');
+  INSERT INTO names (id, name) VALUES (2, 'Uberto');
+
+  SELECT *
+  FROM names;
+
+
+  CREATE TABLE course (
+    id INTEGER,
+    name VARCHAR(255) NOT NULL
+  );
+  
+  INSERT INTO course (id, name) VALUES (1, 'HTML');
+  INSERT INTO course (id, name) VALUES (2, 'CSS');
+
+  SELECT *
+  FROM course;
+
+
+  CREATE TABLE student (
+    id_name INTERGER,
+    id_course INTERGER,
+    PRIMARY KEY (id_name, id_course),
+
+    FOREIGN KEY (id_name)
+    REFERENCE names (id),
+
+    FOREIGN KEY (id_course)  
+    REFERENCE course (id)
+  );
+   
+  INSERT INTO student (id_name, id_couser) VALUES (1,1);
+  INSERT INTO student (id_name, id_couser) VALUES (1, 2);
+
+  SELECT *
+  FROM student;
   
 ```
 
-- Create DBase
+- JOIN ... 4
 
 ```
 
+  SELECT *
+  FROM names
   
+  JOIN student ON student.id_name = names.id
+  JOIN course  ON course.id       = student.course.id
+
+  INSERT INTO student (id_name, id_course) VALUES (2,2); 
+
+  
+  SELECT names.name  as "Student Names",
+         course.name as "Student Course"
+  
+  FROM names
+  
+  JOIN student ON student.id_name = names.id
+  JOIN course  ON course.id       = student.course.id
+
+  INSERT INTO student (id_name, id_course) VALUES (2,2); 
+    
 ```
 
 
