@@ -438,7 +438,7 @@
   
 ```
 
-- JOIN ... 4
+- JOIN: to join tables with the same amount of data.
 
 ```
 
@@ -463,34 +463,318 @@
     
 ```
 
+- LEFT: returns all rows from the left table, and the matched rows from the right table
 
-- 
+```
+  INSERT INTO student 
+  
+  SELECT * 
+  FROM names
+
+  LEFT JOIN student ON student.id_name = names.id
+  LEFT JOIN course ON course.id        = student.course.id
 
 ```
 
-```
-
-- 
+- RIGHT: returns all rows from the right table, and the matched rows from the left table"
 
 ```
+  INSERT INTO student 
+  
+  SELECT * 
+  FROM names
 
-```
-
-- 
-
-```
-
-```
-
-- 
+  RIGHT JOIN student ON student.id_name = names.id
+  RIGHT JOIN course ON course.id        = student.course.id
 
 ```
 
+- FULL: return all 
+
+``` 
+  INSERT INTO student 
+  
+  SELECT * 
+  FROM names
+
+  FULL JOIN student ON student.id_name = names.id
+  FULL JOIN course ON course.id        = student.course.id
+
 ```
 
-- 
+- CROSS
+
+```
+  
+  INSERT INTO student 
+  
+  SELECT * 
+  FROM names
+
+  CROSS JOIN student
 
 ```
 
+- DELETE (Restrict or Cascade)
+
+  - Restrict: standard, you cannot delete an element from a table associated with another table
+  - Cascade: allowed to delete elements present in more than one table
+  
 ```
 
+  // 3 Tables: names, course, student; 
+
+  CREATE TABLE names (
+    id INTERGER,
+    name VARCHAR(255) NOT NULL
+  );
+
+  INSERT INTO names (id, name) VALUES (1, 'Maria');
+  INSERT INTO names (id, name) VALUES (2, 'Uberto');
+
+  SELECT *
+  FROM names;
+
+
+  CREATE TABLE course (
+    id INTEGER,
+    name VARCHAR(255) NOT NULL
+  );
+  
+  INSERT INTO course (id, name) VALUES (1, 'HTML');
+  INSERT INTO course (id, name) VALUES (2, 'CSS');
+
+  SELECT *
+  FROM course;
+
+
+  CREATE TABLE student (
+    id_name INTERGER,
+    id_course INTERGER,
+    PRIMARY KEY (id_name, id_course),
+
+    FOREIGN KEY (id_name)
+    REFERENCE names (id)
+    ON DELETE CASCADE,
+
+    // standard 
+    //ON DELETE RESTRICT
+    
+    FOREIGN KEY (id_course)  
+    REFERENCE course (id)
+  );
+   
+  INSERT INTO student (id_name, id_couser) VALUES (1,1);
+  INSERT INTO student (id_name, id_couser) VALUES (1, 2);
+
+  SELECT *
+  FROM student;
+ 
+  DELETE FROM name WHERE id = 1;
+
+```
+
+- UPDATE 
+
+```
+
+// 3 Tables: names, course, student; 
+
+  CREATE TABLE names (
+    id INTERGER,
+    name VARCHAR(255) NOT NULL
+  );
+
+  INSERT INTO names (id, name) VALUES (1, 'Maria');
+  INSERT INTO names (id, name) VALUES (2, 'Uberto');
+
+  SELECT *
+  FROM names;
+
+
+  CREATE TABLE course (
+    id INTEGER,
+    name VARCHAR(255) NOT NULL
+  );
+  
+  INSERT INTO course (id, name) VALUES (1, 'HTML');
+  INSERT INTO course (id, name) VALUES (2, 'CSS');
+
+  SELECT *
+  FROM course;
+
+
+  CREATE TABLE student (
+    id_name INTERGER,
+    id_course INTERGER,
+    PRIMARY KEY (id_name, id_course),
+
+    FOREIGN KEY (id_name)
+    REFERENCE names (id)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+ 
+    
+    FOREIGN KEY (id_course)  
+    REFERENCE course (id)
+  );
+   
+  INSERT INTO student (id_name, id_couser) VALUES (1,1);
+  INSERT INTO student (id_name, id_couser) VALUES (1, 2);
+
+  SELECT *
+  FROM student;
+ 
+  UPDATE name
+  SET id = 10
+  WHERE id = 2;
+
+```
+
+- Data query - Create basic table
+
+```
+  CREATE TABLE employees {
+    id       SERIAL PRIMARY KEY,
+    register VARCHAR(10),
+    name     VARCHAR(255),
+    last     VARCHAR(255) 
+  };
+
+  INSERT INTO employees (register, name, last) VALEUS ('M001', 'Roberto', 'Peron');
+  INSERT INTO employees (register, name, last) VALEUS ('M002', 'Ana', 'Silva');
+  INSERT INTO employees (register, name, last) VALEUS ('M003', 'Julia', 'Oliveira');
+  INSERT INTO employees (register, name, last) VALEUS ('M004', 'Pedro', 'Almeida');
+  INSERT INTO employees (register, name, last) VALEUS ('M005', 'Carlos', 'Santos');
+  INSERT INTO employees (register, name, last) VALEUS ('M006', 'Antonieta', 'Ada');
+
+  or
+
+  INSERT INTO employees (register, name, last) VALUES 
+  ('M002', 'Ana', 'Silva'),
+  ('M003', 'Carlos', 'Santos'),
+  ('M004', 'Julia', 'Oliveira'),
+  ('M005', 'Pedro', 'Almeida'),
+  ('M006', 'Maria', 'Fernandes');
+ 
+```
+
+- ORDER (ASC and DESC)
+
+```
+  SELECT * 
+  FROM employees
+  ORDER BY name DESC;
+
+  SELECT *
+  FROM employees
+  ORDER BY register, name DESC;
+
+  SELECT *
+  FROM employees
+  ORDER BY 3,4,2;
+
+  SELECT *
+  FROM employees
+  ORDER last DESC, name DESC, register ASC;
+  
+```
+
+- LIMIT, OFFSET
+
+```
+ SELECT *
+ FROM employees
+ LIMIT 5;
+
+ SELECT *
+ FROM employees
+ ORDER BY name
+ LIMIT 3;
+
+ SELECT *
+ FROM employees
+ ORDER BY name
+ LIMIT 3
+ OFFSET 0;
+
+ SELECT *
+ FROM employees
+ ORDER BY name
+ LIMIT 4
+ OFFSET 1;
+  
+```
+
+- COUNT, SUM, MAX, MIN, AVG
+
+```
+ SELECT COUNT (id)
+ FROM employees;
+
+ SELECT COUNT (*)
+ FROM employees;
+
+
+ SELECT COUNT (id),
+        SUM   (id)
+ FROM employees;
+
+ SELECT COUNT (*),
+        SUM   (id)
+ FROM employees;
+
+
+ SELECT COUNT  (id),
+        MAX    (id),
+        SUM    (id)
+ FROM employees;
+
+
+ SELECT COUNT  (id),
+        MAX    (id),
+        MIN    (id),
+        SUM    (*)
+ FROM employees;
+
+
+ SELECT COUNT (id),
+        MAX   (id),
+        MIN   (id),
+        AVG   (id),
+        SUM   (id)
+ FROM employees;
+
+
+
+ SELECT COUNT (id),
+        MAX   (id),
+        MIN   (id),
+        ROUND (AVG(id),0),
+        SUM   (id)
+ FROM employees;
+
+ SELECT COUNT (id),
+        MAX   (id),
+        MIN   (id),
+        ROUND (AVG(id),2),
+        SUM   (id)
+ FROM employees;
+  
+```
+
+- Date repeat ()
+
+```
+ SELECT DISTINCT name 
+ FROM employees
+ ORDER BY name;
+
+
+ SELECT name, last, 
+        COUNT (id)
+ FROM employees
+ GROUP BY name, last
+ ORDER BY name;  
+  
+```
