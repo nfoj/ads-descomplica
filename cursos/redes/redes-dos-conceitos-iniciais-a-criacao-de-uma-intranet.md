@@ -27,10 +27,16 @@
   
 ```
 
-- 
+- ipconfig and ifconfig 
 
 ```
-  
+
+  // windows
+  ipconfig /all
+
+  // linux
+  ifconfig
+  ip addr show
   
 ```
 
