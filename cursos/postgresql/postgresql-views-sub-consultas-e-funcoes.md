@@ -50,16 +50,39 @@
   INSERT INTO category (category_name) VALUES ('Front-end', 'Back-end', 'Data Science', 'Database');
 
   INSERT INTO course (course_name, id_category) 
-  VALUES ('HTML', 1),
-         ('CSS', 1),
-         ('Js', 1),
-         ('Java', 2), 
+  VALUES('HTML', 1),
+        ('CSS', 1),
+        ('Js', 1),
+        ('Java', 2),
+        ('C#', 2),
+        ('Rust', 2), 
+        ('PostgreSQL', 3),
+        ('MySQL', 3), 
+        ('Oracle', 3), 
+        ('SQL Server', 3),
+        ('SQLite', 3), 
+        ('Pandas', 4), 
+        ('Machine Learning', 4), 
+        ('Power Bi', 4); 
   
+  INSERT INTO student VALUES (1, 4),(1, 11), (2, 1), (2, 2), (3, 4), (3, 3), (4, 4), (4, 6), (4, 5);
+
   
 ```
-- 
+- Print!
 
 ```
+
+  SELECT * 
+  FROM name;
+
+
+  SELECT * 
+  FROM name
+  JOIN student ON student.id_name = name.id
+  JOIN course ON course.id = student.id_course; 
+  
+
   
 ```
 - 

@@ -101,3 +101,64 @@ Wan           Serve Security      Lan
 
 > [!NOTE]  
 > Study: AWS Direct Connect VS VPN, CDN - AWM CloudFront
+
+
+# Create
+
+- VPC
+
+  - Name: vpc-test
+  - Block CIDR IPV4 - manual
+  - CIDR IPv4: 10.0.0.0/16
+  - Block CIDR IPv6 - None
+  - Location - standard
+  - Tag (Label) - vpc-name
+  > Create!
+
+
+- Subnet
+
+  - Select: vpc-test
+  - Name: private-subnet-1a
+  - Block CIDR IPv4: 10.0.2.0/24
+  > Create
+
+
+- Subnet
+
+  - Select: vpc-test
+  - Name: public-subnet-1a
+  - Block CIDR IPv4: 10.0.1.0/24
+  > Create
+
+
+- Route table
+
+  - Edit name: private-route-table
+
+
+- Internet Gateway (IGW)
+
+  - Name: gateway-test
+  - Association (Select): vpc-test 
+
+
+- Route table
+  
+  - Select (VPC): vpc-test
+  - Edit route: 0.0.0.0/0
+  - Select: igw (Gateway internet)
+
+
+- Subnet 
+
+  - Edit association: public route table
+
+
+- Gateway NAT
+
+  - Name: gatewaynat-subnet-1a
+  - Select: public-subnet-1a
+  - Connection type: public
+  - IP Elastic Aloocation.
+  > Create!
