@@ -38,6 +38,7 @@
 
   
 ```
+
 - Insert data
 
 ```
@@ -69,7 +70,28 @@
 
   
 ```
-- Print!
+
+- Basic
+
+```
+  SELECT * 
+  FROM category
+  WHERE id =4;
+
+
+  // Change category name
+  UPDATE category 
+  SET name = 'Data-Science'
+  WHERE id =4;
+
+
+  SELECT * 
+  FROM category;
+
+  
+```
+
+- Print
 
 ```
 
@@ -80,24 +102,76 @@
   SELECT * 
   FROM name
   JOIN student ON student.id_name = name.id
-  JOIN course ON course.id = student.id_course; 
-  
+  JOIN course ON course.id = student.id_course;
 
+
+  // Option 1
+  SELECT name.first_name, 
+         name.last_name,
+         COUNT(course.id) list_courses
+  FROM name
+  JOIN student ON student.id_name = name.id
+  JOIN course ON course.id = student.id_course
+  
+  //GROUP BY name.first_name, name.last_name; 
+  //or
+  GROUP BY 1,2
+  ORDER list_courses DESC;
+
+
+  // Option 2
+  SELECT name.first_name,
+         name.last_name,
+         COUNT(course.id) AS list_courses
+  FROM name
+  JOIN stundent ON student.id_name = name.id
+  GROUP BY 1,2
+  ORDER list_courses DESC;
+  
+  // 1 Result
+  LIMIT 1;
+   
   
 ```
-- 
+
+- Seach courses
 
 ```
+  // All courses
+  SELECT *
+  FROM course
+  LEFT JOIN student ON student.id_course = couse.id
+
+
+  // Couser with student
+  SELECT * 
+  FROM course
+  JOIN student ON student.id_course = course.id;
+
+
+  // 
+  SELECT couse.name,
+         COUNT(student.id_name) numbers_student 
+  FROM couse
+  JOIN student ON student.id_course = course.id
+  GROUP BY course.name; // or GROUP BY 1;
+  ORDER BY numbers_student DESC;
   
 ```
-- 
+
+- IN 
 
 ```
+  SELECT *
+  FROM course;
   
-```
-- 
+  SELECT *
+  FROM category;
 
-```
+
+  SELECT *
+  FROM course 
+  WHERE id_category IN (1,2); // WHERE id_category = 1 OR id_category = 2;
   
 ```
 - 
