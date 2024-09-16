@@ -1,17 +1,18 @@
-# Rust
+# Rust!
 
 2. Syntax and Semantics
 
-    a. print, comments and placeholders;
-
+a. print, comments and placeholders;
+  
 - Comments:
+
   - Line: //
   - Block: /* and */
 
   ```
     // line;
     /* block; */
-  
+    
   ```
 
 Examples: 
@@ -19,6 +20,7 @@ Examples:
 
 
 - Print:
+
   - print!: print text without line breacks;
   - println!: print text with line breaks;
 
@@ -47,7 +49,7 @@ Example:
 - Placeholders: {}, {:.n}
 
   ```
-  let a = "Alice";
+    let a = "Alice";
 
     // {}
     
@@ -59,7 +61,6 @@ Example:
     
     println!("My name is {name}");
     // My name is Alice
-
     
     // {:.n}
     
