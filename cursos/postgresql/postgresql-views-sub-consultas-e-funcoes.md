@@ -168,18 +168,53 @@
   SELECT *
   FROM category;
 
-
   SELECT *
   FROM course 
-  WHERE id_category IN (1,2); // WHERE id_category = 1 OR id_category = 2;
+  WHERE id_category IN (1,2); // WHERE id_category = 1 OR id_category = 2;  
   
 ```
-- 
+
+- Queries
 
 ```
+  SELECT * 
+  FROM course
+  WHERE id_category IN (1, 2);
+
+  SELECT * 
+  FROM course
+  WHERE name NOT LIKE '% %';
+
+
+  // Sub-queries
+
+  SELECT * 
+  FROM course
+  WHERE id_category IN ( 
   
+    SELECT * 
+    FROM course
+    WHERE name NOT LIKE '% %'
+  
+  );
+
+
+  // 
+
+  SELECT course.name
+  FROM course
+  WHERE id_category IN (
+
+    SELECT course.name
+    FROM course
+    WHERE name LIKE '%SQL';
+    
+  );
+
+
 ```
-- 
+
+- 4
 
 ```
   
