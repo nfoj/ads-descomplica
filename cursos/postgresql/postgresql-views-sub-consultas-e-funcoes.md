@@ -214,9 +214,19 @@
 
 ```
 
-- 4
+- View
 
 ```
+
+  CREATE VIEW vw_course_programming 
+  AS SELECT name 
+  FROM course 
+  WHERE id_category = 2;
+
+
+  SELECT *
+  FROM vw_course_programming;
+
   
 ```
 - 
