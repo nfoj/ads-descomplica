@@ -71,4 +71,98 @@
   
 ```
 
-- 2 item 4
+- Not exists
+
+```
+
+  // IF NOT EXISTS
+  
+  CREATE TABLE clients;
+  CREATE TABLE IF NOT EXISTS clients; 
+
+  // Notice: relation "clients" alredy exists ...
+
+```
+
+- Default
+
+```
+
+  // DEFAULT
+  
+  CREATE TABLE clients (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL,
+    date_birth DATE NOT NULL DEFAULT NOW()::DATE
+  );
+
+
+  CREATE TABLE employess (
+    id SERIAL PRIMARY KEY,
+    first_name VARCHAR(255) NOT NULL DEFAULT 'E1'
+  );
+
+```
+
+- Check
+
+```
+
+  // CHECK // <> or !=
+
+  CREATE TABLE students (
+   id SERIAL PRIMARY KEY,
+   first_name VARCHAR(255) NOT NULL,
+   last_name VARCHAR(255) NOT NULL CHECK (last_name != '')
+  );
+
+```
+
+- Temporary
+
+```
+
+  // TEMPORARY TABLE
+
+  CREATE TEMPORARY TABLE name(
+    column VARCHAR(255) NOT NULL CHECK(column != '')
+  );
+
+  INSERT INTO name VALUES ('');
+  // ERRO
+
+  INSERT INTO name VALUES ('Roberto');
+  
+```
+
+- Remane
+
+```
+  CREATE TEMPORARY TABLE tb_a (
+    column_a VARCHAR(255) NOT NULL
+  );
+
+  ALTER TABLE tb_a RENAME TO tb_b;
+  
+  SELECT * 
+  FROM tb_b;
+
+
+  ALTER TABLE tb_b RENAME column_a TO column_b; 
+  
+```
+
+- Insert
+
+```
+  
+  // '' = data  //  "" = text  //  '10.0' > 10.0 
+  INSERT INTO table_a VALUES ('A', "A", 19.0);
+
+  SELECT table_a 
+  AS "Table A" 
+  FROM tb_a;
+  
+```
+
+- 3 > 4
