@@ -30,3 +30,5 @@ Access control
 - Secret Key: AWS (KMS);
 - Server-side encryption: AWS responsibility;
 - Client-side encryption: Customer responsibility.
+
+6c
