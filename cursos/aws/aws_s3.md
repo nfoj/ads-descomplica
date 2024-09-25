@@ -31,4 +31,29 @@ Access control
 - Server-side encryption: AWS responsibility;
 - Client-side encryption: Customer responsibility.
 
-6c
+
+Aws S3 Storage
+
+- S3 standard: frequently accessed data
+- S3 standard IA: infrequently accessed long-term data
+- S3 One Zone IA: non-critical, infrequently accessed long-term data
+- S3 Glacier pr Deep Archive: rarely accessed data
+
+
+Cicler life
+
+Start =  s3 standart (30 days) > s3 standard - IA (60 days) > s3 one zone IA (90 Days) > delete = finish
+
+
+# Create Bucket
+
+Name: S3-bucket
+Region: choice! (Unique region)
+ACLs: recomendation
+Access: private
+Versioning: disabled
+Create
+
+6.h
+
+
