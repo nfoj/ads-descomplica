@@ -165,4 +165,20 @@
   
 ```
 
-- 3 > 4
+- Import and Export
+
+```
+  Table import
+    Format: .csv
+    Encoding: UTF8
+    Header: Yes or No
+    Delimites: , . | [tab]
+    Quote: ""
+    Columns: select
+
+  Table export
+    Format: 
+    Encoding: 
+    ...
+  
+```

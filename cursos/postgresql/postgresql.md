@@ -1,34 +1,20 @@
 # PostgreSQL
 
 
-- Basic Commands 
+- PgAdmin4
 
 ```
-  \h = help!
+  // Register -  Server
+  Name: postgresql
 
-  \h create role = help create role
-
-  \? = list commands
-
-  \l = list data base
-
-  \du = list users
-
-  \c <data base> = acess data base especification
-
-  \q = exit
-
-  \d = list table
-  \dS = list table system 
-
-  \! = terminal
-    exit > user sql
-
-  \! date = acess terminal command
-  \! pwd
-  
+  // Connection
+  Host name/address: postgresql
+  port: 5432
+  Maintenance database: postgres
+  usarname: pgadmin
+  password: postgres
+ 
 ```
-
 
 - Create DBase
 
@@ -39,19 +25,26 @@
   OWNER = postgres
   ENCODING = 'UTF8'
   CONNECTION LIMIT = -1;
+
+  // -1: no limit connect
   
 ```
-
-  -1: no limit connect
-
 
 - Delete DBase
 
 ```
-  DROP DATABASE "name";
+  // DROP DATABASE "name";
+  DROP DATABASE student;
   
 ```
 
+- List DBase
+
+```
+  // SELECT * FROM "name";
+  SELECT * FROM student;
+  
+```
 
 - Types
 
@@ -76,10 +69,9 @@
     timestamp 'YYYY-MM-DD HH24:MM:SS'
 
 
-- Types - Use
+- Create Data base
 
 ```
-
   CREATE TABLE student (
     id SERIAL,
     name VARCHAR(255),
@@ -98,7 +90,6 @@
   // NUMERIC(10,2): 12345678,90
 
 ```
-
 
 - Insert sigle row into table
 
