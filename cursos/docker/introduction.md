@@ -1,21 +1,6 @@
 # Docker!
 
 
-## Introduction
-
-    - What are Containers?
-    - Need for Containers
-    - Bare Metal vs VM vs Containers
-    - Docker and OCI
-
-
-## Underlying Technologies
-
-    - Namespaces
-    - cgroups
-    - Union Filesystems
-
-
 ## Installation Setup
 
     - Docker Desktop (Linux)
