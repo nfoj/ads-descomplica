@@ -7,7 +7,7 @@ Nesse repositório, farei uma revisão completa dos conteúdos abordados nas dis
 Modulo A1
 - [ ]  Desenvolvimento Dinâmico
 - [ ]  Desenvolvimento FrontEnd
-- [ ]  Experiência do Usuário
+- [X]  Experiência do Usuário
 ...
 
 ### 💾 Arquivos 
