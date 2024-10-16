@@ -9,6 +9,7 @@
         - print, comments and placeholders;
         - variables and mutability;
         - data types;
+        - input std;
 
     b. Control flow constructs;
     
