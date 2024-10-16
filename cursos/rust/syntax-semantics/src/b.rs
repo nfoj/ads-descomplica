@@ -19,5 +19,4 @@ pub fn cfconstructs() {
     let age: i8 = age.trim().parse().expect("Failed in read line!");
 
     println!("You are {} years.", age);
-    
 }
