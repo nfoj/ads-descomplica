@@ -32,6 +32,11 @@ Access control
 - Client-side encryption: Customer responsibility.
 
 
+Data reading consistency
+
+- Whenever you modify or delete an object, please allow some time for AWS to update all backups connected to the bucket.
+
+
 Aws S3 Storage
 
 - S3 standard: frequently accessed data
@@ -55,8 +60,15 @@ Versioning: disabled
 Create
 
 
+Events
 
+You can configure your bucket to perform a specific action after a certain event. 
 
+- Create
+- Put
+- Copy
+...
 
+Example: For example, every time a user creates an object, the system can send a notification.
 
 
