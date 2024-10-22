@@ -6,7 +6,7 @@ Nesse repositório, farei uma revisão completa dos conteúdos abordados nas dis
 
 Modulo 1A
 - [ ]  Desenvolvimento Dinâmico
-- [ ]  Desenvolvimento FrontEnd
+- [X]  Desenvolvimento FrontEnd
 - [X]  Experiência do Usuário
 
 Modulo 1B
