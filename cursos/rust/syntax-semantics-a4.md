@@ -7,7 +7,6 @@ d. input
   - std
 
   ```
-
     // use std::io - data input library
     let mut input = String::new();
     let stdin = io::stdin();
