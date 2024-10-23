@@ -62,10 +62,16 @@ Example:
     println!("My name is {name}");
     // My name is Alice
     
+
     // {:.n}
     
     pritnln!("Pi is {:.2}", pi);
     // Pi is 3.14
+
+
+    // {:?}
+    let a = 10;
+    println!("{:?}", a);
 
   ```
 

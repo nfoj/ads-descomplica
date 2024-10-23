@@ -32,4 +32,7 @@ pub fn a1() {
     println!("Pi is approximately: {}", pi);
     println!("Pi to 2 decimal places: {:.2}", pi);
     println!("------------------------------");
+
+    println!("{:?}", age);
+    println!("-----------------------------------");
 }
