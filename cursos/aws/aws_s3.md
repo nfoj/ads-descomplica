@@ -60,7 +60,7 @@ Versioning: disabled
 Create
 
 
-Events
+- Events
 
 You can configure your bucket to perform a specific action after a certain event. 
 
@@ -72,3 +72,69 @@ You can configure your bucket to perform a specific action after a certain event
 Example: For example, every time a user creates an object, the system can send a notification.
 
 
+- Permissions
+
+  - Acess file
+  - Permissions
+  - By default, public acess is blocked > Edit
+  - [] Block all acess public
+  - Save!
+
+  - Bucket Policy
+
+    - Edit > Code
+    or
+    - AWS Policy Generator
+    
+      - Select: S3 Bucket Policy
+      - Effect: [X]Allow []Deny
+      - Principal: *
+      - AWS Service: ...
+      - Actions: Select actions ...
+      - Amazon Resource Name (ARN): Name File (Search file ARN)      
+      - Generate!
+      - Copy
+      - Paste
+      - Save!
+
+
+- Delete
+
+  - [X]Select file
+  - Delete
+  - Permanently delete
+
+
+- Versioning
+  
+  - Edit versioning bucket
+  - [X]Allow
+  - Save!
+  - Show versions! 
+
+
+- Control versions
+
+  - Show versions
+  - Delete file? [X]Yes 
+  
+  - Recover file
+    - Show versions
+    - [X]Select the version with a maker
+    - Delete
+    - Permanently delete
+
+    - Obs: Each modification or addition of a file with the same name creates a new version, which is appended to the version list. Deleting a version replaces it with the previous one.
+      
+      - Example:
+      
+      Tree
+      ├── versionId_1  # First version
+      │   ├── metadata: { create_in: "2023-11-01" }
+      │   └── content: { ... }
+      ├── versionId_2  # Second version (... modification)
+      │   ├── metadata: { create_in: "2023-11-05" }
+      │   └── content: { ... }
+      └── versionId_3  # Third version (... modification)
+          ├── metadata: { create_in: "2023-11-10" }
+          └── content: { ... }
