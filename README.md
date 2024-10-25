@@ -10,7 +10,7 @@ Modulo 1A
 - [X]  Experiência do Usuário
 
 Modulo 1B
-- [ ]  Empreendedorismo e Criação de Novos Negócios
+- [X]  Empreendedorismo e Criação de Novos Negócios
 - [ ]  Lógica de Programação
 ...
 
