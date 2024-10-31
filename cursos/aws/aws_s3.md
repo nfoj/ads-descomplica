@@ -138,3 +138,19 @@ Example: For example, every time a user creates an object, the system can send a
       └── versionId_3  # Third version (... modification)
           ├── metadata: { create_in: "2023-11-10" }
           └── content: { ... }
+
+
+- Management
+
+- Lifecycle rules
+  Name: S3-Cycle
+  Select a scope for the rule: 
+    [] Filter + Type filter (Format)
+    [] All
+  Select Actions: [] ...
+    Obs: Based on the choice made, the options below will change.
+  
+  Version transition: 
+    [] Ai Standard  [30] Days 
+    [] Add ..  
+  
