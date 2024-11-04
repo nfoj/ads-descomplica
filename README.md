@@ -12,7 +12,24 @@ Modulo 1A
 Modulo 1B
 - [X]  Empreendedorismo e Criação de Novos Negócios
 - [ ]  Lógica de Programação
-...
+
+Modulo 2A
+- [ ]  Design de Software
+- [ ]  Estruturas de Dados para Sistemas Inteligentes
+- [ ]  Programação I
+ 
+Modulo 2B
+- [ ]  Desenvolvimento de Aplicações de Banco de Dados
+- [ ]  Prática Integradora Tecnologias Disruptivas
+
+Modulo 1C
+- [ ]  Arquitetura de Computadores do Século XXI
+- [ ]  Desenvolvimento Mobile
+- [ ]  Programação II
+
+Modulo 1C
+- [ ]  Framework
+- [ ]  Prática Integradora Desenvolvimento de Apps
 
 ### 💻 Cursos:
 - [ ]  AWS;
