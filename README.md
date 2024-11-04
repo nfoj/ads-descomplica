@@ -22,12 +22,12 @@ Modulo 2B
 - [ ]  Desenvolvimento de Aplicações de Banco de Dados
 - [ ]  Prática Integradora Tecnologias Disruptivas
 
-Modulo 1C
+Modulo 3A
 - [ ]  Arquitetura de Computadores do Século XXI
 - [ ]  Desenvolvimento Mobile
 - [ ]  Programação II
 
-Modulo 1C
+Modulo 3B
 - [ ]  Framework
 - [ ]  Prática Integradora Desenvolvimento de Apps
 
