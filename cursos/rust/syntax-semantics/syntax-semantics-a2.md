@@ -35,10 +35,49 @@ b. variables and mutability;
 
   - Add 'mut' after let to change the value of a variable.
 
-    - let mut name = "Jonas";
-    - let mut age = 40;
-    - let mut city = "Mexico";
-    - let mut pet = "Cat";
+  ```
+    // Variaveis
+    // let nome = "valor";
+  
+    let mut name = "Alice";
+    println!("Qual o seu nome: {}", name);
+    println!("------------------------------");
+      
+    name = "Carlos";
+    println!("Qual o seu nome: {}", name);
+    println!("------------------------------");
+      
+
+    let mut num = 24;
+    println!("Qual número você escolheu? {}", num);
+    println!("------------------------------");
+      
+    num = 12;
+    println!("Qual número você escolheu? {}", num);
+    println!("------------------------------");
+      
+
+    let mut letter = 'a';
+    println!("Qual é a primeira letra que vem à sua mente? {}", letter);
+    println!("------------------------------");
+      
+    letter = 'b';
+    println!("Qual é a primeira letra que vem à sua mente? {}", letter);
+    println!("------------------------------");
+      
+
+    let mut ok = true;
+    println!("1 + 1 é igual a dois? {}", ok);
+    println!("------------------------------");
+
+    ok = false;
+    println!("1 + 1 é igual a dois? {}", ok);
+    println!("------------------------------");
+
+  ```
+
+  Examples: 
+  [Acess](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=1f539fc55724489f8dda00e02fe2c14f)
 
 
 > [!WARNING]
@@ -104,6 +143,9 @@ b. variables and mutability;
 
   ```
 
+  Examples:
+  [Acess](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=df8f098992b4bf3a61ee22f1663dbcb4)
+
 - Scope
 
   - When a block of code is enclosed within curly braces {}, it enters a new scope, which is nested within the main program's scope.
@@ -121,3 +163,6 @@ b. variables and mutability;
     println!("{}", x);
 
   ```
+
+  Examples:
+  [Acess](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=023a467eb4c4a7b4dbce9d12eeb05620)
