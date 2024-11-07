@@ -27,6 +27,10 @@ b. variables and mutability;
 
   ```
 
+  Examples: 
+  [Acess](https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=8433dc0e04c73205f692933d53514b12)
+
+
 - Variables and Mutability
 
   - Add 'mut' after let to change the value of a variable.
