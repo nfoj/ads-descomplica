@@ -1,4 +1,3 @@
-```
 # Shut Up, Evil Dragon! I Don't Want to Raise a Child With You Anymore - Chapter 1  
 <!-- Cala-se, Dragão Malvado! Eu não quero criar filhos com você - Capítulo 1 -->
 <!-- 
@@ -146,9 +145,3 @@ fast = mais rápido
 <!-- -->
 <!-- [Contexto!] -->
 <!-- -->
-
-
-
-
-
-```
