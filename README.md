@@ -5,39 +5,40 @@ Nesse repositório, farei uma revisão completa dos conteúdos abordados nas dis
 ### 🗂️ Estrutura:
 
 Modulo 1A
-- [ ]  Desenvolvimento Dinâmico
-- [X]  Desenvolvimento FrontEnd
-- [X]  Experiência do Usuário
+- [x]  Desenvolvimento Dinâmico
+- [x]  Desenvolvimento FrontEnd
+- [x]  Experiência do Usuário
 
 Modulo 1B
-- [X]  Empreendedorismo e Criação de Novos Negócios
-- [ ]  Lógica de Programação
+- [x]  Empreendedorismo e Criação de Novos Negócios
+- [x]  Lógica de Programação
 
 Modulo 2A
-- [ ]  Design de Software
-- [ ]  Estruturas de Dados para Sistemas Inteligentes
-- [ ]  Programação I
+- [x]  Design de Software
+- [x]  Estruturas de Dados para Sistemas Inteligentes
+- [x]  Programação I
  
 Modulo 2B
-- [ ]  Desenvolvimento de Aplicações de Banco de Dados
-- [ ]  Prática Integradora Tecnologias Disruptivas
+- [x]  Desenvolvimento de Aplicações de Banco de Dados
+- [x]  Prática Integradora Tecnologias Disruptivas
 
 Modulo 3A
-- [ ]  Arquitetura de Computadores do Século XXI
-- [ ]  Desenvolvimento Mobile
-- [ ]  Programação II
+- [x]  Arquitetura de Computadores do Século XXI
+- [x]  Desenvolvimento Mobile
+- [x]  Programação II
 
 Modulo 3B
-- [ ]  Framework
-- [ ]  Prática Integradora Desenvolvimento de Apps
+- [x]  Framework
+- [x]  Prática Integradora Desenvolvimento de Apps
 
 ### 💻 Cursos:
-- [ ]  AWS;
+- [x]  AWS;
 - [ ]  Bash;
 - [X]  Docker;
 - [X]  Git;
 - [X]  Linux;
 - [X]  PostgreSQL;
+- [ ]  Python;
 - [ ]  Redes;
 - [ ]  Rust.
 
