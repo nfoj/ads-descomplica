@@ -33,14 +33,10 @@ Modulo 3B
 
 ### 💻 Cursos:
 - [x]  AWS;
-- [ ]  Bash;
 - [X]  Docker;
 - [X]  Git;
 - [X]  Linux;
 - [X]  PostgreSQL;
-- [ ]  Python;
-- [ ]  Redes;
-- [ ]  Rust.
 
 ### 💾 Arquivos 
 Todos os arquivos e estudos estão disponíveis em formato Markdown, permitindo o acesso e consulta a qualquer pessoa.
