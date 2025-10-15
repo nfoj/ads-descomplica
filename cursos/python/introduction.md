@@ -38,7 +38,7 @@
 
 - Modo Interativo
   - python -i app.py
-   
+
 - Dica:
   dir(): atributos de um objeto
   help(): documentação
@@ -58,7 +58,7 @@
   print(nome, sobrenome)
   print(nome, sobrenome, end="...\n")
   print(nome, sobrenome, sep="#")
-  
+
 - Quiz:
   - float("a"), exibe qual valor para o usuário?
   - Seguindo a convenção, qual a melhor forma de declarar a constante limite do saque em Python?
@@ -70,8 +70,61 @@
   - Seguindo a convenção, qual a melhor forma de declarar a variável limite do saque em Python?
   - Por que usamos tipos de dados?
   - Quais são as classes utilizadas para representar números inteiros e ponto flutuante respectivamente?
-   
- 
-- Legendas
 
-[...] Nada a comentar
+- Operadores
+  - (+)  print(2 + 2)
+  - (-)  print(2 - 2)
+  - (*)  print(2 * 2)
+  - (/)  print(2 / 2)
+  - (%)  print(2 % 2)
+  - (//) print(2 // 2)
+  - (**) print(2 ** 2)
+
+- Precedencia
+  - ()
+  - **
+  - *, /
+  - +, -
+
+- Comparação
+  - (==)
+  - (>)
+  - (<)
+  - (>=)
+  - (<=)
+  - (!=)
+
+- Atribuição
+  - (+=)
+  - (-=)
+  - (*=)
+  - (/=)
+  - (//=)
+  - (**=)
+
+- Lógicos
+  - and
+  - or
+  - not
+
+- Identidade
+  - is
+  - is not
+
+- Associação (Esta presente em | nao esta presente)
+  - in
+  - in not
+  - eg. =
+    curso = "Curso de Python"
+    "Python" in curso >>> True
+
+    frutas = ["Laranja", "Uva", "Pera"]
+    "Tangerina" in frutas >>> False
+
+  - Quiz
+  - Qual operador de comparação podemos utilizar para verificar a variável saldo é maior ou igual a variável saque?
+  - No programa: saldo = 500 saldo += 300 Qual o valor de saldo?
+  - O que são os operadores de associação?
+  - Qual é o operador de negação para uma expressão lógica?
+  - x = (22 - 10) * 3, Qual o valor de x?
+  - Quais são os operadores de identidade?
